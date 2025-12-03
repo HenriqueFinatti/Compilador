@@ -1,4 +1,3 @@
-.vs
-src/bin
-src/obj
-src.csproj
+bin
+obj
+Compilador.csproj

@@ -3,7 +3,7 @@
 ## Lista De Tokens
 O compilador aceita os seguintes tipos de tokens
 - **Id:** [a-z A-Z _ ][a-z A-Z 0-9 _]*
-- **Palavras Reservadas:** (int | char | string | double | bool | true | false | void | for | while | if | if | input | output)
+- **Palavras Reservadas:** (int | char | string | double | bool | true | false | void | for | while | if | input | output)
 - **Operadores Logicos:** (AND | OR | NOT)
 - **Operadores Matematicos:** (+ | - | / | * | %)
 - **Operadores Relacionais:** (>= | <= | != | = | > | <)
