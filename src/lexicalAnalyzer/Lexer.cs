@@ -17,12 +17,44 @@ namespace Compilador.lexicalAnalyzer
 			this.afds.Add(new KeyWords());
 		}
 
+		public void avoidWhiteSpaces()
+        {
+            while(characterIterator.Current() == ' ' || characterIterator.Current() == '\n' || characterIterator.Current() == '\r' || characterIterator.Current() == '\t')
+            {
+                characterIterator.Next();
+            }
+        }
+
+		public Token? searchNextToken()
+        {
+            int index = characterIterator.getIndex();
+
+			foreach(AFD afd in afds)
+            {
+                Token? token = afd.evaluate(characterIterator);
+				if(token != null)
+                {
+                    return token;
+                }
+				characterIterator.setIndex(index);
+            }
+			return null;
+        }
 		public List<Token> getToken()
 		{
-			Token t1 = new Token("a", "b");
-			Token t2 = new Token("a", "c");
-			this.tokens.Add(t1);
-			this.tokens.Add(t2);
+			
+			Token? token;
+            do
+            {
+            	this.avoidWhiteSpaces();
+				token = searchNextToken();
+
+				if(token == null)
+                {
+                    throw new Exception("Erro");
+                }
+				tokens.Add(token);
+            }while(characterIterator.Current() != characterIterator.EOF);
 
 			return this.tokens;
 		}

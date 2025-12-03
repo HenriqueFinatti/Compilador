@@ -24,6 +24,9 @@ namespace Compilador.lexicalAnalyzer
         }
 
         public char Current() { 
+            if(index >= this.sourceCode.Length)
+                return EOF;
+                
             return this.sourceCode[index]; 
         }
 

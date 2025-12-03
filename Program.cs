@@ -13,7 +13,12 @@ namespace Compilador
             {
                 string sourceCode = File.ReadAllText(sourceCodePath);
                 Lexer lexer = new Lexer(sourceCode);
-                // Console.WriteLine(sourceCode);
+                List<Token> tokens = lexer.getToken();
+
+                foreach(Token t in tokens)
+                {
+                    Console.WriteLine(t.toString());
+                }
                 
             }
 

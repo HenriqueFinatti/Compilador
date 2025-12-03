@@ -1,9 +1,2 @@
-string path = @"C:\Users\rickf\OneDrive\Documentos\git\Compilador\SourceCode.txt";
-          
-            if (File.Exists(path))
-            {
-                string sourceCode = File.ReadAllText(path);
-                Lexer lexer = new Lexer(sourceCode);
-                List<Token> tokens = lexer.getToken();
-
-            }
+string 
+int
