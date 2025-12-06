@@ -42,7 +42,7 @@ namespace Compilador.lexicalAnalyzer
         }
 		public List<Token> getToken()
 		{
-			
+
 			Token? token;
             do
             {
@@ -51,7 +51,8 @@ namespace Compilador.lexicalAnalyzer
 
 				if(token == null)
                 {
-                    throw new Exception("Erro");
+					Console.WriteLine(characterIterator.Current());
+                    throw new Exception("Error, token not recognized: " + characterIterator.Current());
                 }
 				tokens.Add(token);
             }while(characterIterator.Current() != characterIterator.EOF);

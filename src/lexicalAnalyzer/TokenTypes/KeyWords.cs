@@ -19,11 +19,16 @@ namespace Compilador.lexicalAnalyzer.TokenTypes
 
 			return token;
 		}
-		
+
 		public override Token? evaluate(CharacterIterator sourceCode)
 		{
+			if (sourceCode.Current() == sourceCode.EOF)
+            {
+                return new Token("EOF", "$");
+            }
+
 			string token = this.buildToken(sourceCode);
-			
+
 			foreach(string keyWord in keyWords)
 			{
 				if(token == keyWord)
