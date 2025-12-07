@@ -19,6 +19,8 @@ namespace Compilador.lexicalAnalyzer
 			this.afds.Add(new LogicOperator());
 			this.afds.Add(new RelationalOperator());
 			this.afds.Add(new MathOperator());
+			this.afds.Add(new DoubleValues());
+			this.afds.Add(new IntegerValues());
 			this.afds.Add(new Ids());
 		}
 
@@ -56,7 +58,6 @@ namespace Compilador.lexicalAnalyzer
 
 				if(token == null)
                 {
-					Console.WriteLine(characterIterator.Current());
                     throw new Exception("Error, token not recognized: " + characterIterator.Current());
                 }
 				tokens.Add(token);
