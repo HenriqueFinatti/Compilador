@@ -18,7 +18,7 @@ namespace Compilador.lexicalAnalyzer.TokenTypes
 
             if(token == "AND" || token == "NOT" || token == "OR")
             {
-                return new Token("LogicOperator", token);
+                return new Token(tokenType, token);
             }
             return null;
         }
