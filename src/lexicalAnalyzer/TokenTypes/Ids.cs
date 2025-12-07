@@ -45,6 +45,11 @@ namespace Compilador.lexicalAnalyzer.TokenTypes
 		}
         public override Token? evaluate(CharacterIterator sourceCode)
         {
+            if (sourceCode.Current() == sourceCode.EOF)
+            {
+                return new Token("EOF", "$");
+            }
+
             int ASCIIcode = (int)sourceCode.Current();
             // Verifying if the first character is A-Z or a-z or _
             if ((ASCIIcode >= 65 && ASCIIcode <= 90) || (ASCIIcode >= 97 && ASCIIcode <= 122) || ASCIIcode == 95)

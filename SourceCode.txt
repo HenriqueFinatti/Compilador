@@ -1,2 +1,2 @@
-string tre
-int void
+int teste
+AND NOT OR

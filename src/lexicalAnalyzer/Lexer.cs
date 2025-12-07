@@ -15,6 +15,7 @@ namespace Compilador.lexicalAnalyzer
 			this.sourceCode = sourceCode;
 			this.characterIterator = new CharacterIterator(sourceCode);
 			this.afds.Add(new KeyWords());
+			this.afds.Add(new LogicOperator());
 			this.afds.Add(new Ids());
 		}
 
