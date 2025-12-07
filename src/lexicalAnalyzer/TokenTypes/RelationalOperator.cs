@@ -4,7 +4,7 @@ namespace Compilador.lexicalAnalyzer.TokenTypes
 {
     public class RelationalOperator : AFD
     {
-        protected string tokenType = "RelationalOperator";
+        public string tokenType = "RelationalOperator";
         public override Token? evaluate(CharacterIterator sourceCode)
         {
 

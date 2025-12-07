@@ -3,6 +3,7 @@ namespace Compilador.lexicalAnalyzer.TokenTypes
 {
     public class Ids : AFD
     {
+        public string tokenType = "Id";
         public string buildToken(CharacterIterator sourceCode)
 		{
 			string token = "";
@@ -55,7 +56,7 @@ namespace Compilador.lexicalAnalyzer.TokenTypes
             if ((ASCIIcode >= 65 && ASCIIcode <= 90) || (ASCIIcode >= 97 && ASCIIcode <= 122) || ASCIIcode == 95)
             {
                 string token = buildToken(sourceCode);
-                return new Token("Id", token);
+                return new Token(tokenType, token);
             }
 
             return null;
