@@ -4,7 +4,7 @@ namespace Compilador.lexicalAnalyzer.TokenTypes
 	public class KeyWords : AFD
 	{
 		protected string tokenType = "KeyWords";
-		protected string[] keyWords = { "int", "char", "string", "double", "bool", "true", "false", "void", "for", "while", "if", "input", "output" };
+		protected string[] keyWords = { "int", "char", "string", "double", "bool", "void", "for", "while", "if", "input", "output" };
 
 
 		public string buildToken(CharacterIterator sourceCode)
