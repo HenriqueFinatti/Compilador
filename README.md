@@ -7,7 +7,7 @@ O compilador aceita os seguintes tipos de tokens
 - **Operadores Logicos:** (AND | OR | NOT)
 - **Operadores Matematicos:** (+ | - | / | * | %)
 - **Operadores Relacionais:** (>= | <= | != | = | > | <)
-- **Operador Atribui��o:** <-
+- **Operador Atribuição:** <-
 - **Valores Inteiros:** [0-9]+
 - **Valores Caracteres:** '.*'
 - **Valores String:** ".*"
@@ -17,8 +17,8 @@ O compilador aceita os seguintes tipos de tokens
 - **Parenteses Fechado:** )
 - **Chaves Aberta:** {
 - **Chaves Fechada:** }
-- **Fim de Instru��o:** ;
-- **Coment�rios:** & .*
+- **Fim de Instrução:** ;
+- **Comentários:** & .*
 - **Incremento:** ++
 - **Decremento:** --
 - **Controle De String:** ,

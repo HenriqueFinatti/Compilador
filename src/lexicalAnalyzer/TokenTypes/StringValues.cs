@@ -1,28 +1,31 @@
 
 namespace Compilador.lexicalAnalyzer.TokenTypes
 {
-    public class CharacterValues : AFD
+    public class StringValues : AFD
     {
-        protected string tokenType = "CharacterValues";
+        protected string tokenType = "StringValues";
         public override Token? evaluate(CharacterIterator sourceCode)
         {
             string token = "";
-            if (sourceCode.Current() == '\'')
+            if (sourceCode.Current() == '\"')
             {
                 token += sourceCode.Current();
 
                 sourceCode.Next();
                 token += sourceCode.Current();
-                if (sourceCode.Current() == '\'')
+                if (sourceCode.Current() == '\"')
                 {
                     sourceCode.Next();
                     return new Token(tokenType, token);
                 }
 
-                sourceCode.Next();
-                token += sourceCode.Current();
+                while (sourceCode.Current() != '\"' && sourceCode.Current() != '\n' && sourceCode.Current() != '\t' && sourceCode.Current() != sourceCode.EOF)
+                {
+                    sourceCode.Next();
+                    token += sourceCode.Current();
+                }
 
-                if (sourceCode.Current() == '\'')
+                if (sourceCode.Current() == '\"')
                 {
                     sourceCode.Next();
                     return new Token(tokenType, token);

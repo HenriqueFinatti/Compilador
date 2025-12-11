@@ -20,6 +20,7 @@ namespace Compilador.lexicalAnalyzer
 			this.afds.Add(new RelationalOperator());
 			this.afds.Add(new MathOperator());
 			this.afds.Add(new DoubleValues());
+			this.afds.Add(new StringValues());
 			this.afds.Add(new CharacterValues());
 			this.afds.Add(new IntegerValues());
 			this.afds.Add(new Ids());

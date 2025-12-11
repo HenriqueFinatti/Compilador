@@ -1,7 +1,7 @@
 'a'
-int char string double bool true false void for while if input output
+"int char string double bool true false void for while if input output"
 AND NOT OR
 +  -  /  *  %
 >=  <=  !=  =  >  <
 < <- -
-3465<-1.2
+3465<-1.2''""
