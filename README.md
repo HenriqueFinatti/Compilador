@@ -7,9 +7,9 @@ O compilador aceita os seguintes tipos de tokens
 - **Operadores Logicos:** (AND | OR | NOT)
 - **Operadores Matematicos:** (+ | - | / | * | %)
 - **Operadores Relacionais:** (>= | <= | != | = | > | <)
-- **Operador Atribuição:** <-
+- **Operador Atribuiï¿½ï¿½o:** <-
 - **Valores Inteiros:** [0-9]+
-- **Valores Caracteres:** '[a-z A-Z 0-9]'
+- **Valores Caracteres:** '.*'
 - **Valores String:** ".*"
 - **Valores Double:** [0-9]+.[0-9]+
 - **Valores Booleanos:** (true | false)
@@ -17,14 +17,14 @@ O compilador aceita os seguintes tipos de tokens
 - **Parenteses Fechado:** )
 - **Chaves Aberta:** {
 - **Chaves Fechada:** }
-- **Fim de Instrução:** ;
-- **Comentários:** & .*
+- **Fim de Instruï¿½ï¿½o:** ;
+- **Comentï¿½rios:** & .*
 - **Incremento:** ++
 - **Decremento:** --
 - **Controle De String:** ,
 ```
 void introducao(){
-	output("Esse é um exemplo de código do meu compilador");
+	output("Esse ï¿½ um exemplo de cï¿½digo do meu compilador");
 }
 int void main(){
 	int a = 0;
