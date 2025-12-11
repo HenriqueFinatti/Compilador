@@ -7,33 +7,42 @@ namespace Compilador.lexicalAnalyzer.TokenTypes
         protected string tokenType = "LogicOperator";
         public override Token? evaluate(CharacterIterator sourceCode)
         {
-            string token;
-
-            if (sourceCode.Current() == sourceCode.EOF)
+            if (sourceCode.Current() == 'A')
             {
-                return new Token("EOF", "$");
+                sourceCode.Next();
+                if(sourceCode.Current() == 'N')
+                {
+                    sourceCode.Next();
+                    if (sourceCode.Current() == 'D')
+                    {
+                        sourceCode.Next();
+                        return new Token(tokenType, "AND");
+                    }
+                }
             }
-
-            token = buildToken(sourceCode);
-
-            if(token == "AND" || token == "NOT" || token == "OR")
+            else if (sourceCode.Current() == 'N')
             {
-                return new Token(tokenType, token);
+                sourceCode.Next();
+                if(sourceCode.Current() == 'O')
+                {
+                    sourceCode.Next();
+                    if (sourceCode.Current() == 'T')
+                    {
+                        sourceCode.Next();
+                        return new Token(tokenType, "NOT");
+                    }
+                }
+            }
+            else if(sourceCode.Current() == 'O')
+            {
+                sourceCode.Next();
+                if (sourceCode.Current() == 'R')
+                {
+                    sourceCode.Next();
+                    return new Token(tokenType, "OR");
+                }
             }
             return null;
         }
-
-        public string buildToken(CharacterIterator sourceCode)
-		{
-			string token = "";
-
-			while (sourceCode.Current() != ' ' && sourceCode.Current() != '\n' && sourceCode.Current() != '\r' && sourceCode.Current() != '\t' && sourceCode.Current() != sourceCode.EOF)
-			{
-				token += sourceCode.Current();
-				sourceCode.Next();
-			}
-
-			return token;
-		}
     }
 }

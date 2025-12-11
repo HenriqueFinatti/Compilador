@@ -38,7 +38,11 @@ namespace Compilador.lexicalAnalyzer
 
 			foreach(AFD afd in afds)
             {
-                Token? token = afd.evaluate(characterIterator);
+				if (characterIterator.Current() == characterIterator.EOF)
+                {
+                    return new Token("EOF", "$");
+                }
+				Token? token = afd.evaluate(characterIterator);
 				if(token != null)
                 {
                     return token;

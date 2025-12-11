@@ -25,7 +25,7 @@ namespace Compilador.lexicalAnalyzer
 
 		public string toString()
 		{
-			return "<" + this.tipo + ", " + this.lexema + ">";
+			return "<" + this.tipo + ", '" + this.lexema + "'>";
 		}
-	}   
+	}
 }

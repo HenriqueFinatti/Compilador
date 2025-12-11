@@ -19,9 +19,7 @@ namespace Compilador
                 {
                     Console.WriteLine(t.toString());
                 }
-                
             }
-
         }
     }
 }

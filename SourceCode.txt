@@ -1,4 +1,4 @@
-int teste
+int char string double bool true false void for while if input output
 AND NOT OR
 +  -  /  *  %
 >=  <=  !=  =  >  <

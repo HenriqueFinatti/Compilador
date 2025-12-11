@@ -3,18 +3,20 @@ namespace Compilador.lexicalAnalyzer.TokenTypes
 {
 	public class KeyWords : AFD
 	{
-		protected string tokenType = "keyWords";
+		protected string tokenType = "KeyWords";
 		protected string[] keyWords = { "int", "char", "string", "double", "bool", "true", "false", "void", "for", "while", "if", "input", "output" };
 
 
 		public string buildToken(CharacterIterator sourceCode)
 		{
 			string token = "";
+			int sizeControl = 0;
 
-			while (sourceCode.Current() != ' ' && sourceCode.Current() != '\n' && sourceCode.Current() != '\t' && sourceCode.Current() != sourceCode.EOF)
+			while (sourceCode.Current() != ' ' && sourceCode.Current() != '\n' && sourceCode.Current() != '\t' && sourceCode.Current() != sourceCode.EOF && sizeControl < 6)
 			{
 				token += sourceCode.Current();
 				sourceCode.Next();
+				sizeControl++;
 			}
 
 			return token;
