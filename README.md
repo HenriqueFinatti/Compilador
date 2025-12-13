@@ -3,7 +3,7 @@
 ## Lista De Tokens
 O compilador aceita os seguintes tipos de tokens
 - **Id:** [a-z A-Z _ ][a-z A-Z 0-9 _]*
-- **Palavras Reservadas:** (int | char | string | double | bool | true | false | void | for | while | if | input | output)
+- **Palavras Reservadas:** (int | char | string | double | bool | void | for | while | if | input | output)
 - **Operadores Logicos:** (AND | OR | NOT)
 - **Operadores Matematicos:** (+ | - | / | * | %)
 - **Operadores Relacionais:** (>= | <= | != | = | > | <)
@@ -27,15 +27,15 @@ void introducao(){
 	output("Esse é um exemplo de código do meu compilador");
 }
 int void main(){
-	int a = 0;
-	char b = 'b';
-	string c = "c";
-	double d = 1.1;
-	bool e = false;
+	int a <- 0;
+	char b <- 'b';
+	string c <- "c";
+	double d <- 1.1;
+	bool e <- false;
 
 	introducao();
 
-	for(int i = 0; i < 10; i++){
+	for(int i <- 0; i < 10; i++){
 		output("Valor do i", i, ".");
 	}
 

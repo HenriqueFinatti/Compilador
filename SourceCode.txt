@@ -1,8 +1,26 @@
-true false
-'a'
-"int char string double bool true false void for while if input output"
-AND NOT OR
-+  -  /  *  %
->=  <=  !=  =  >  <
-< <- -
-3465<-1.2''""
+void introducao(){
+	output("Esse é um exemplo de código do meu compilador");
+}
+int void main(){
+	int a <- 0;
+	char b <- 'b';
+	string c <- "c";
+	double d <- 1.1;
+	bool e <- false;
+
+	introducao();
+
+	for(int i <- 0; i < 10; i++){
+		output("Valor do i", i, ".");
+	}
+
+	if(a = 0 AND b = 'b'){
+		output("X");
+	}
+	else if(c = "c"){
+		output("X");
+	}
+	else{
+		output(d);
+	}
+}

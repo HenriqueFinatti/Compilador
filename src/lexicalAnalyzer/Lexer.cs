@@ -15,13 +15,19 @@ namespace Compilador.lexicalAnalyzer
 			this.sourceCode = sourceCode;
 			this.characterIterator = new CharacterIterator(sourceCode);
 			this.afds.Add(new KeyWords());
+			this.afds.Add(new Increment());
+			this.afds.Add(new Decrement());
 			this.afds.Add(new AssignmentOperator());
 			this.afds.Add(new LogicOperator());
 			this.afds.Add(new RelationalOperator());
 			this.afds.Add(new MathOperator());
 			this.afds.Add(new DoubleValues());
+			this.afds.Add(new CurlyBraces());
+			this.afds.Add(new StringControl());
+			this.afds.Add(new EndInstruction());
 			this.afds.Add(new StringValues());
 			this.afds.Add(new BooleanValues());
+			this.afds.Add(new Parentheses());
 			this.afds.Add(new CharacterValues());
 			this.afds.Add(new IntegerValues());
 			this.afds.Add(new Ids());
@@ -32,6 +38,19 @@ namespace Compilador.lexicalAnalyzer
             while(characterIterator.Current() == ' ' || characterIterator.Current() == '\n' || characterIterator.Current() == '\r' || characterIterator.Current() == '\t')
             {
                 characterIterator.Next();
+            }
+        }
+
+		public void avoidComments()
+        {
+			if (characterIterator.Current() == '&')
+            {
+				characterIterator.Next();
+            	while(characterIterator.Current() != '\n')
+                {
+                    characterIterator.Next();
+                }
+
             }
         }
 
