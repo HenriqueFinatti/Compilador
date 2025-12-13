@@ -24,7 +24,7 @@ O compilador aceita os seguintes tipos de tokens
 - **Controle De String:** ,
 ```
 void introducao(){
-	output("Esse � um exemplo de c�digo do meu compilador");
+	output("Esse é um exemplo de código do meu compilador");
 }
 int void main(){
 	int a = 0;
