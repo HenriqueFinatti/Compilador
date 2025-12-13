@@ -10,7 +10,7 @@ namespace Compilador.lexicalAnalyzer.TokenTypes
                 if (sourceCode.Current() == '-')
                 {
                     sourceCode.Next();
-                    return new Token("Increment", "--");
+                    return new Token("Decrement", "--");
                 }
             }
 

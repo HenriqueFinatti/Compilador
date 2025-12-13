@@ -40,7 +40,7 @@ namespace Compilador.lexicalAnalyzer.TokenTypes
                             if (sourceCode.Current() == 'e')
                             {
                                 sourceCode.Next();
-                                return new Token(tokenType, "true");
+                                return new Token(tokenType, "false");
                             }
                         }
                     }

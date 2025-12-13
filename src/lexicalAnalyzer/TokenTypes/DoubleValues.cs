@@ -35,7 +35,7 @@ namespace Compilador.lexicalAnalyzer.TokenTypes
 		}
         public override Token? evaluate(CharacterIterator sourceCode)
         {
-
+            isDouble = false;
             if (sourceCode.Current() == sourceCode.EOF)
             {
                 return new Token("EOF", "$");

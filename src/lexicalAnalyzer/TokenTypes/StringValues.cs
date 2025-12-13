@@ -10,9 +10,9 @@ namespace Compilador.lexicalAnalyzer.TokenTypes
             if (sourceCode.Current() == '\"')
             {
                 token += sourceCode.Current();
-
                 sourceCode.Next();
                 token += sourceCode.Current();
+
                 if (sourceCode.Current() == '\"')
                 {
                     sourceCode.Next();

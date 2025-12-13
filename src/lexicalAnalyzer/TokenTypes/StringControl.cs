@@ -7,7 +7,7 @@ namespace Compilador.lexicalAnalyzer.TokenTypes
             if (sourceCode.Current() == ',')
             {
                 sourceCode.Next();
-                return new Token("String Control", ";");
+                return new Token("String Control", ",");
             }
 
             return null;
