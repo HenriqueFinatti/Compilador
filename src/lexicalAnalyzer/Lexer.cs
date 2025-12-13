@@ -39,6 +39,7 @@ namespace Compilador.lexicalAnalyzer
             {
                 characterIterator.Next();
             }
+			avoidComments();
         }
 
 		public void avoidComments()
@@ -46,11 +47,12 @@ namespace Compilador.lexicalAnalyzer
 			if (characterIterator.Current() == '&')
             {
 				characterIterator.Next();
-            	while(characterIterator.Current() != '\n')
+            	while(characterIterator.Current() != '&')
                 {
                     characterIterator.Next();
                 }
-
+				characterIterator.Next();
+				avoidWhiteSpaces();
             }
         }
 
@@ -80,6 +82,8 @@ namespace Compilador.lexicalAnalyzer
             do
             {
             	this.avoidWhiteSpaces();
+				this.avoidComments();
+
 				token = searchNextToken();
 
 				if(token == null)

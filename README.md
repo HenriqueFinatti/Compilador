@@ -18,7 +18,7 @@ O compilador aceita os seguintes tipos de tokens
 - **Chaves Aberta:** {
 - **Chaves Fechada:** }
 - **Fim de Instrução:** ;
-- **Comentários:** & .*
+- **Comentários:** & .* &
 - **Incremento:** ++
 - **Decremento:** --
 - **Controle De String:** ,

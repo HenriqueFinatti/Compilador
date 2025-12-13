@@ -1,0 +1,24 @@
+ &Teste&
+	&lksdhjfkl sçogfhdslknl vçsdjhglksdgfn void
+	&
+	char b <- 'b';
+	string c <- "c";
+	double d <- 1.1;
+	bool e <- false;
+
+	introducao();
+
+	for(int i <- 0; i < 10; i++){
+		output("Valor do i", i, ".");
+	}
+
+	if(a = 0 AND b = 'b'){
+		output("X");
+	}
+	else if(c = "c"){
+		output("X");
+	}
+	else{
+		output(d);
+	}
+}
